@@ -1,0 +1,208 @@
+<div fxLayout="row"  fxLayoutWrap="wrap">
+  <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+    <md-card class="card-widget md-teal">
+      <div md-card-widget>
+        <div md-card-float-icon>
+          <md-icon>play_circle_filled</md-icon>
+        </div>
+        <div class="pl-0">
+          <h5 md-card-widget-title>1103</h5>
+          <p>Vidéos</p>
+        </div>
+      </div>
+    </md-card>
+  </div>
+  <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+    <md-card class="card-widget md-purple">
+      <div md-card-widget>
+        <div md-card-float-icon>
+          <md-icon>eye</md-icon>
+        </div>
+        <div class="pl-0">
+          <h5 md-card-widget-title>40230</h5>
+          <p>Vues</p>
+        </div>
+      </div>
+    </md-card>
+  </div>
+  <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+    <md-card class="card-widget md-red">
+      <div md-card-widget>
+        <div md-card-float-icon>
+          <md-icon>video_library</md-icon>
+        </div>
+        <div class="pl-0">
+          <h5 md-card-widget-title>323</h5>
+          <p>Chaines</p>
+        </div>
+      </div>
+    </md-card>
+  </div>
+  <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+    <md-card class="card-widget md-indigo">
+      <div md-card-widget>
+        <div md-card-float-icon>
+          <md-icon>monetization_on</md-icon>
+        </div>
+        <div class="pl-0">
+          <h5 md-card-widget-title>870.25$</h5>
+          <p>Revenue</p>
+        </div>
+      </div>
+    </md-card>
+  </div>
+</div>
+
+<div  fxLayout="row"  fxLayoutWrap="wrap">
+  <!-- bar -->
+  	<div fxFlex.gt-sm="33.33%" fxFlex="100">
+		<md-card>
+      <md-card-subtitle fxLayout="row"  fxLayoutAlign="start center">
+        Revenue &nbsp; <span class="font-weight-bold md-text-primary">+458,90</span>
+        <span fxFlex></span>
+      
+      </md-card-subtitle>
+<material-datepicker [(date)]="yourModelDate"></material-datepicker>
+			<md-card-content>
+        <canvas height="200" baseChart class="chart"
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [colors]="chartColors"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"></canvas>
+      </md-card-content>
+		</md-card>
+	</div>
+	  <!-- pie 
+  <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="50" fxFlex="100">
+    <md-card>
+      <md-card-title>Visiteurs</md-card-title>
+      <md-card-subtitle></md-card-subtitle>
+      <md-card-content>
+        <canvas height="200" baseChart class="chart"
+          [data]="pieChartData"
+          [options]="doughnutOptions"
+          [colors]="doughnutChartColors"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"></canvas>
+      </md-card-content>
+    </md-card>
+  </div>-->
+
+  
+  <!-- bar -->
+  <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="50" fxFlex="100">
+    <md-card>
+      <md-card-title>Vues</md-card-title>
+      <md-card-subtitle></md-card-subtitle>
+      <md-card-content>
+        <canvas height="200" baseChart class="chart"
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartStackedOptions"
+          [colors]="lineChartColors"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"></canvas>
+      </md-card-content>
+    </md-card>
+  </div>
+ 
+  <!-- line 
+  <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="50" fxFlex="100">
+    <md-card>
+      <md-card-title>Durée moyenne des sessions</md-card-title>
+      <md-card-subtitle></md-card-subtitle>
+      <md-card-content>
+        <canvas height="200" baseChart class="chart"
+          [datasets]="lineChartSteppedData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType"></canvas>
+      </md-card-content>
+    </md-card>
+  </div>-->
+
+  <!-- mixed 
+  <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="50" fxFlex="100">
+    <md-card>
+      <md-card-title>Pages/session</md-card-title>
+      <md-card-subtitle></md-card-subtitle>
+      <md-card-content>
+        <canvas height="200" baseChart class="chart"
+          [datasets]="ComboChartData"
+          [labels]="lineChartLabels"
+          [options]="ComboChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="barChartType"></canvas>
+      </md-card-content>
+    </md-card>
+  </div>-->
+
+  <!-- doughnut 
+  <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="50" fxFlex="100">
+    <md-card>
+      <md-card-title>Appareils</md-card-title>
+      <md-card-subtitle></md-card-subtitle>
+      <md-card-content>
+        <canvas height="200" baseChart class="chart"
+          [data]="doughnutChartData"
+          [labels]="doughnutChartLabels"
+          [options]="doughnutOptions"
+          [colors]="doughnutChartColors"
+          [chartType]="doughnutChartType"></canvas>
+      </md-card-content>
+    </md-card>
+  </div>-->
+
+
+</div>
+
+
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <div fxFlex.gt-sm="66.66%" fxFlex="100">
+    <ngx-datatable
+      class="material"
+      [rows]="rows"
+      [columnMode]="'force'"
+      [headerHeight]="50"
+      [footerHeight]="0"
+      [rowHeight]="'auto'">
+      <ngx-datatable-column name="Chaine">
+        <template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row['project']}}
+        </template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Date">
+        <template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row['date'] | date: 'MMMM dd'}}
+        </template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Vues">
+        <template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <md-progress-bar mode="determinate" value="{{row['progress']}}" color="primary"></md-progress-bar>
+        </template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+  <div fxFlex.gt-sm="33.33%" fxFlex="100">
+    <md-card>
+      <md-card-title>Les commentaires </md-card-title>
+      <md-card-subtitle>Les plus récents</md-card-subtitle>
+      <hr>
+      <md-list>
+        <template let-item let-last="last" ngFor [ngForOf]="messages">
+          <md-list-item>
+            <img md-list-avatar src="{{item.photo}}" alt="">
+            <h3 md-line> {{item.from}} </h3>
+            <p md-line> {{item.subject}} - {{item.message}} </p>
+          </md-list-item>
+        </template>
+      </md-list>
+    </md-card>
+  </div>
+</div>
+

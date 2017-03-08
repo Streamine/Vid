@@ -1,0 +1,77 @@
+<p>Videos Management</p>
+
+<md-input-container style="width: 100%" class="mb-1">
+  <input mdInput placeholder="Tapez pour filtrer.." required (keyup)='updateFilter($event)'>
+</md-input-container>
+<ngx-datatable
+class='material'
+[columns]="columns"
+[columnMode]="'force'"
+[headerHeight]="50"
+[footerHeight]="50"
+[rowHeight]="'auto'"
+[limit]="10"
+[rows]='rows'>
+
+	  <ngx-datatable-column name="image" [flexGrow]="2">
+          <template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <img
+			width="100" height="70"
+          src="{{value}}"/>
+          </template>
+        </ngx-datatable-column>
+		<ngx-datatable-column name="titre" >
+          <template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+          </template>
+        </ngx-datatable-column>
+		<ngx-datatable-column name="description" >
+          <template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+          </template>
+        </ngx-datatable-column>
+		<ngx-datatable-column name="date" >
+          <template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+          </template>
+        </ngx-datatable-column>
+
+		<ngx-datatable-column name="categorie" >
+          <template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+          </template>
+        </ngx-datatable-column>
+		<ngx-datatable-column name="duree" >
+          <template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+          </template>
+        </ngx-datatable-column>
+		<ngx-datatable-column name="likes" >
+          <template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+          </template>
+        </ngx-datatable-column>
+		<ngx-datatable-column name="vues" >
+          <template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+          </template>
+        </ngx-datatable-column>
+		<ngx-datatable-column name="status" >
+          <template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+          </template>
+        </ngx-datatable-column>
+		  <ngx-datatable-column name="Options">
+		   <template let-value="value" ngx-datatable-cell-template>
+
+			<button md-button class="mr-1" (click)="VideoDetails()">Détails</button>
+			<!--<button md-button color="primary" class="mr-1"><a href="#">Editer</a></button>-->
+			<button md-button color="warn" class="mr-1" (click)="onClickRemove($index)">Supprimer</button>
+		
+          </template>
+			  
+
+      </ngx-datatable-column>
+</ngx-datatable>
+
+

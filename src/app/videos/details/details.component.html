@@ -1,0 +1,56 @@
+<md-toolbar color="primary">
+  <md-toolbar-row>   
+  </md-toolbar-row>
+</md-toolbar>
+
+<div  fxLayout="row"  fxLayoutWrap="wrap"  fxLayoutAlign="center start">
+  <div fxFlex.gt-sm="55" fxFlex="100">
+    <md-card class="md-card-top">
+
+          <template md-tab-label>General</template>
+          <md-card-content>
+            <form  fxLayout="column">
+				 <md-input-container class="mb-1">
+					
+					<input mdInput placeholder="Titre" value="female"/>
+				</md-input-container>
+				    <md-select placeholder="Status" class="mb-1">
+						<md-option value="Hawaii">active</md-option>
+						<md-option value="Hawaii">inactive</md-option>
+					</md-select>
+				<md-input-container class="mb-1">
+                <input mdInput placeholder="Description" value="  My company name is very long and funny because funny is fun">
+              </md-input-container>
+
+              <md-input-container class="mb-1">
+                <input mdInput placeholder="Date" value="22-02-2017">
+              </md-input-container>
+
+              <md-input-container class="mb-1">
+                <input mdInput placeholder="Catégorie"  value="humour">
+              </md-input-container>
+			  
+              <md-input-container class="mb-1">
+                <input mdInput placeholder="Durée"  value="4.20">
+              </md-input-container>
+
+              <md-input-container class="mb-1">
+                <input mdInput placeholder="Likes" value="20">
+              </md-input-container>
+
+			  <md-input-container class="mb-1">
+                <input mdInput placeholder="Vues" value="201020">
+              </md-input-container>
+
+            </form>
+          </md-card-content>
+
+   
+      <hr>
+      <md-card-actions>
+        <button md-raised-button class="shadow-none">Save</button>
+        <button md-raised-button color="primary">Cancel</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>
